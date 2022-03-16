@@ -1,0 +1,21 @@
+status 查看git状态
+
+add 添加到缓存区
+commit （XXX）-m "msg" 将缓存区的指定文件XXX提交到本地库，若无指定文件则全部提交，-m “提交信息”
+
+reflog 提交日志
+log 完整日志
+
+reset --hard 0cf3be0 版本穿梭至某一个版本，根据版本号（示例版本号为0cf3be0）
+
+branch -v 查看当前分支
+branch XXX 创建分支名为XXX的分支
+checkout XXX 切换到XXX分支
+merge XXX  将XXX分支合并到当前分支
+手动处理冲突：将特殊符号（head指针，要合并的分支指针，分割符）删除，保留想要的内容再提交，不可指定要commit文件
+
+remote add XXX https://.../X.git 创建远程库（通过地址）并创建别名XXX（通常为origin）
+remote -v 查看当前别名列表
+push XXX master 将当前本地库master分支推送到XXX远程库（只推送已经commit的内容，可用于团队协作中）
+pull XXX master 拉取远程库XXX的master分支到本地库
+clone https://.../X.git 将远程库文件通过地址克隆到本地库
